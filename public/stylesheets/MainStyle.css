@@ -1,0 +1,281 @@
+a{
+    text-decoration:none;
+    color: black;
+    font-size: 15px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: black;
+    padding: 0;
+    margin: 0;
+}
+
+form{
+    margin:0;
+}
+
+.Wrapper{
+    display: grid;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+    grid-template-columns:1fr;
+    grid-auto-rows: 90px auto auto;
+}
+
+.header {
+    color: #e7e9e7;
+    height: 90px;
+    background-color: #008080;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    margin: 35px 35px;
+    float: left;
+}
+nav {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.top-menu {
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+.top-menu li {
+    float: left;
+    display: block;
+    margin-right: 40px;
+}
+
+.top-menu li.active {
+    background: #87a162;
+    color: #fff;
+    border-radius: 2px;
+}
+
+.top-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+h1{
+    font-size: 16px;
+    color: white;
+    padding:0 10px;
+}
+
+.banner{
+    text-align: center;
+    color:white;
+    background: url("../images/main.png") no-repeat center top / cover;
+    height: 500px;
+}
+
+.form{
+    text-align: right;
+}
+
+.text{
+    margin-top:100px;
+}
+
+.banner header {
+    font-size: 50px;
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+}
+
+p2{
+    font-size: 20px;
+    color:black;
+}
+
+.banner button{
+    margin: 30px;
+    padding:10px 20px;
+    border:0;
+    background-color: #87a162;
+    text-decoration:none;
+}
+.banner a{
+    text-decoration:none;
+    font-size: 15px;
+    color:white;
+}
+
+.section {
+    display: grid;
+    grid-template-areas:
+    "t1 t2 t3"
+    "inf1 inf2 inf3";
+    grid-template-columns:1fr 1fr 1fr;
+    grid-auto-rows: auto auto;
+    width: 1200px;
+    margin: 30px auto 0;
+}
+
+.section p1{
+    margin-top:10px;
+    text-align: center;
+    color:black;
+    font-size: 15px;
+}
+
+.section p{
+    margin:0;
+    text-align: center;
+    color:black;
+    font-size: 15px;
+}
+
+.section header {
+    color:blue;
+    font-size: 22px;
+}
+
+.section header a{
+    color:blue;
+    font-size: 22px;
+}
+
+/*.main {
+    display: grid;
+    grid-template-areas:
+        "line1"
+        "line2";
+    grid-template-columns:1fr;
+    grid-auto-rows: 250px 250px;
+}
+.line1{
+    grid-area: line1;
+    display: grid;
+    grid-template-areas:
+        "t1 t2 t3"
+    grid-template-columns:1fr 1fr 1fr;
+    grid-auto-rows: 250px;
+}
+.line2{
+    grid-area: line2;
+    display: grid;
+    grid-template-areas:
+        "inf1 inf2 inf3";
+    grid-template-columns:1fr 1fr 1fr;
+    grid-auto-rows: 250px;
+    background-color: rgb(245,245,245);
+}*/
+
+.txt1{
+    grid-area: t1;
+    text-align: center;
+    word-break:break-all;
+    margin:10px;
+}
+
+.txt1 li{
+    display: inline-block;
+    list-style-position:inside;
+    font-size:14px;
+    padding:10px;
+}
+.txt2{
+    grid-area: t2;
+    text-align: center;
+    word-break:break-all;
+    margin:10px;
+}
+
+.txt2 li{
+    display: inline-block;
+    list-style-position:inside;
+    font-size:14px;
+    padding:10px;
+}
+.txt3{
+    grid-area: t3;
+    text-align: center;
+    word-break:break-all;
+    margin:10px;
+}
+
+.txt3 li{
+    display: inline-block;
+    list-style-position:inside;
+    font-size:14px;
+    padding:10px;
+}
+.main div{
+    background-color: rgb(245,245,245);
+}
+
+.section header{
+    font-size:25px;
+}
+
+.inf{
+    grid-area: inf3;
+    text-align: center;
+    word-break:break-all;
+    padding: 23px 0;
+    margin:10px;
+    font-size:14px;
+    background-color: rgb(245,245,245);
+}
+
+figure img {
+    position: relative;
+    border-radius: 10%;
+    width: 320px;
+    height: 180px;
+    border: 1px solid #fff;
+    box-shadow: 0 0 1px rgba(0,0,0,0.1);
+}
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    justify-content:space-evenly;
+    background-color: #008080 ;
+    font-size:10px;
+    color:white;
+}
+.footer div a{
+    color:white;
+    font-size:10px;
+}
+.footer h4{
+    font-size:15px;
+}
+
+.column1{
+    grid-area: cl1;
+    word-break:break-all;
+}
+
+.column2{
+    grid-area: cl3;
+    word-break:break-all;
+}
+.column3{
+    grid-area: cl4;
+    word-break:break-all;
+}
+
+.column4 {
+    margin-top: 50px;
+    order:2;
+}
+
