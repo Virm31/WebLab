@@ -1,0 +1,57 @@
+doctype html
+html
+
+<head>
+  <link rel="stylesheet", href="/stylesheets/style.css">
+<script type="text/javascript" src="../public/javascripts/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+  <div class="Wrapper">
+    <header class="header">
+        <div class="container">
+        <img src="../images/logo.png" alt="Golden" class = "logo">
+        <nav>
+          <ul class="top-menu">
+            each item in navmenu
+              <li><a href="#{item.addr}">#{item.name}</a></li>
+          </ul>
+        </nav>
+        <form class="search">
+          <input name="s" placeholder="Что хотим приготовить?" type="search">
+          <button type="submit">Поиск</button>
+        </form>
+    </header>
+
+    <main>
+      block content
+    </main>
+
+    <footer class="footer">
+      <div class="column1">
+        <h4>О нас</h4>
+        <p><a href="#">Лучшие авторы</a> </p>
+        <p><a href="#">Отзывы</a> </p>
+        <p><a href="#">Коммерческие предложения</a> </p>
+        <p><a href="#">Vk</a> </p>
+        <p><a href="#">Instagram</a> </p>
+      </div>
+      <div class="column2">
+        <h4>Блог</h4>
+        <p><a href="#">Популярные авторы</a> </p>
+        <p><a href="#">Популярные рецепты</a></p>
+      </div>
+      <div class="column3">
+        <h4>Связь</h4>
+        <p>Телефон: +9(999)999-99-99 </p>
+        <p>Почта:glasha@mail.ru </p>
+      </div>
+        <div class="column4">
+        <footer-logo>
+          <img src="../images/logo.png" alt="Golden">
+        </footer-logo>
+      </div>
+    </footer>
+  </div>
+
+</body>
