@@ -13,6 +13,6 @@ exports.navmenu = [
     },
     {
         name: 'Предложить свой рецепт',
-        addr: '/contact'
+        addr: '/SendRecipe'
     }
 ];
