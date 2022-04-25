@@ -130,8 +130,6 @@ p2{
   color:black;
 }
 
-/*Стилизация баннера страницы про пирог*/
-
 /*Стилизация главной части главной страницы*/
 
 .section {
@@ -218,6 +216,95 @@ figure img {
   height: 180px;
   border: 1px solid #fff;
   box-shadow: 0 0 1px rgba(0,0,0,0.1);
+}
+
+/*Стилизация баннера страницы про пирог*/
+.pieBanner {
+  text-align: center;
+  color:white;
+  background: url(../images/Pirog.png) no-repeat center top / cover;
+  height: 500px;
+  display: grid;
+  width: 100%;
+  clear: both;
+}
+
+.title_first {
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 190px;
+}
+
+p2{
+  font-size: 20px;
+  color:black;
+}
+
+.banner a{
+  text-decoration:none;
+  font-size: 15px;
+  color:white;
+}
+
+.container_pie {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.container_recipe {
+  margin-top: 30px;
+}
+
+.pie_section {
+  display: grid;
+}
+
+.pie_section p{
+  color: #777777;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.title h2 {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  color: black;
+}
+
+.recipe__ingredient {
+  display: block;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #1d211f;
+  text-align: left;
+  border-bottom: 1px solid #e7e9e7;
+  padding: 3px 0 5px;
+}
+
+.recipe__step	{
+  font-size: 16px;
+  line-height: 1.5;
+  width: 300px;
+  float: left;
+  text-align: center;
+}
+
+.recipe__step h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: black;
+}
+
+.recipe__step p {
+  color: #777777;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 /*стилизация главной части отправки рецепта*/
