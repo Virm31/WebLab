@@ -86,16 +86,16 @@ a{
   text-align: right;
 }
 
-/*Стилизация баннера*/
+/*Стилизация баннера главной страницы*/
 
-.banner{
+.homeBanner{
   text-align: center;
   color:white;
   /*background: url(../images/main.png);*/
   height: 500px;
 }
 
-.text{
+.homeBanner div{
   text-align: center;
   color:white;
   padding-top:300px;
@@ -103,7 +103,7 @@ a{
   height: 300px;
 }
 
-.banner h {
+.homeBanner h {
   font-size: 50px;
   color: black;
   text-transform: uppercase;
@@ -111,7 +111,7 @@ a{
   font-weight: bold;
 }
 
-.banner button{
+.homeBanner button{
   margin: 30px;
   padding:10px 20px;
   border:0;
@@ -119,7 +119,7 @@ a{
   text-decoration:none;
 }
 
-.banner a{
+.homeBanner a{
   text-decoration:none;
   font-size: 15px;
   color:white;
@@ -130,7 +130,9 @@ p2{
   color:black;
 }
 
-/*Стилизация главной части*/
+/*Стилизация баннера страницы про пирог*/
+
+/*Стилизация главной части главной страницы*/
 
 .section {
   display: grid;
@@ -180,6 +182,7 @@ p2{
   word-break:break-all;
   margin:10px;
 }
+
 .txt2{
   grid-area: t2;
   text-align: center;
@@ -217,7 +220,95 @@ figure img {
   box-shadow: 0 0 1px rgba(0,0,0,0.1);
 }
 
+/*стилизация главной части отправки рецепта*/
 
+.sendContainer {
+  width: 1200px;
+  margin: 0 auto;
+  display: block;
+  background: url(../images/syr_background.jpeg) no-repeat center top / cover;;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+
+
+.sendForm {
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: #cbced3;
+  border-radius: 5px;
+  margin-left: 100px;
+  padding: 10px;
+  width: 800px;
+}
+
+.sendForm p{
+  color: black;
+  font-size: 14px;
+}
+
+legend {
+  color: black;
+}
+
+textarea {
+  width: 100%;
+  padding-top: 16px;
+  border-radius: 4px;
+}
+
+.sendForm input {
+  margin-bottom: 16px;
+  border: none;
+  border-bottom: 1px solid #777777;
+  width: 100%;
+  background-color: #cbced3;
+  border-radius: 4px;
+}
+
+.sendForm select{
+  border: none;
+  border-bottom: 1px solid #777777;
+  width: 100%;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  background-color: #cbced3;
+}
+
+.sendForm button {
+  background-color: rgb(135, 161, 98);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.sendForm fieldset {
+  margin-left: 40px;
+}
+
+.facts a {
+  color: white;
+  background-color: rgba(135, 161, 98, 0.8);
+  font-size: 18px;
+  padding: 10px;
+  margin-left: 100px;
+  border-radius: 4px;
+}
+
+.facts p {
+  margin-left: 100px;
+  color: white;
+  background-color: rgba(135, 161, 98, 0.8);;
+  font-size: 15px;
+  border-radius: 4px;
+}
+/*стилизация футтера*/
 
 .footer {
   grid-area: footer;
@@ -227,10 +318,12 @@ figure img {
   font-size:10px;
   color:white;
 }
+
 .footer div a{
   color:white;
   font-size:10px;
 }
+
 .footer h4{
   font-size:15px;
 }
