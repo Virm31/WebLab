@@ -335,19 +335,27 @@ p2{
 
 }
 
-.sendRequest{
-  display: block;
+.otvet{
+  grid-area: sendRequest;
+  background-color: #cbced3;
+  margin-left: 80px;
+  border-radius: 5px;
   margin-top: 30px;
   margin-bottom: 30px;
-  background-color: #cbced3;
-  border-radius: 5px;
-  margin-left: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 9px;
+  width: 280px;
+}
+
+.sendRequest{
+  display: block;
+  height: 586px;
+  /*background-color: #cbced3;*/
   /*padding: 10px;*/
-  width: auto;
 }
 
 .sendRequest p{
-  grid-area: sendRequest;
   border-radius: 5px;
   border-color: black;
 }
