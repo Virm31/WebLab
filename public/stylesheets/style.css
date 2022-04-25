@@ -310,15 +310,13 @@ p2{
 /*стилизация главной части отправки рецепта*/
 
 .sendContainer {
-  width: 1200px;
+  width: 100%;
   margin: 0 auto;
   display: block;
   background: url(../images/syr_background.jpeg) no-repeat center top / cover;;
   padding-top: 30px;
   padding-bottom: 30px;
 }
-
-
 
 .sendForm {
   display: block;
@@ -329,6 +327,23 @@ p2{
   margin-left: 100px;
   padding: 10px;
   width: 800px;
+}
+
+.sendRequest{
+  float: left;
+  width: 250px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.sendRequest p{
+  border-radius: 5px;
+  border-color: black;
+}
+
+.sendField{
+
 }
 
 .sendForm p{

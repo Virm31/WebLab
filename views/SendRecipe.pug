@@ -3,8 +3,13 @@ extends layout
 block content
 
         <div class = "sendContainer">
+
                 <form class="sendForm"id="ContactForm" onsubmit="send_recipe(this)">
-                        <fieldset>
+                        <fieldset class="sendRequest">
+                        <legend>Ответ на ваш запрос</legend>
+                                <p id="statusfield"><img src="images/bg1.png" width="230" height="180" ></p>
+                        </fieldset>
+                        <fieldset class="sendField">
                                 <legend>Заполните форму</legend>
                                 <div>
                                     <p>Имя</p>
