@@ -5,7 +5,8 @@ let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 
 let homePageRouter = require('./routes/HomePage');
-let usersRouter = require('./routes/SendRecipe');
+let sendRouter = require('./routes/SendRecipe');
+let pieRouter = require('./routes/CherryPie');
 
 let app = express();
 
@@ -20,7 +21,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', homePageRouter);
-app.use('/SendRecipe', usersRouter);
+app.use('/SendRecipe', sendRouter);
+app.use('/CherryPie', pieRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
