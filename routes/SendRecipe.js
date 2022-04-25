@@ -11,4 +11,17 @@ router.get('/', function(req, res, next) {
         navmenu: main_controller.navmenu } );
 });
 
+router.post("/ajaxrequest", function (req, res) {
+    console.log(req.body);  // выводим в консоль полученные данные
+    if(!req.body) return response.sendStatus(400);
+    // Читаем поле firstname из полученного json
+    try {
+        var msg = req.body.firstname + ", ваш запрос получен !";
+    } catch(err) {
+        console.error(err)
+    }
+
+    res.json({ message: msg }); // отправляем ответ
+});
+
 module.exports = router;

@@ -316,6 +316,11 @@ p2{
   background: url(../images/syr_background.jpeg) no-repeat center top / cover;;
   padding-top: 30px;
   padding-bottom: 30px;
+  display: grid;
+  grid-template-areas:
+    "sendRequest" "sendField";
+  grid-template-columns:300px 1000px;
+  grid-auto-rows: auto;
 }
 
 .sendForm {
@@ -326,24 +331,29 @@ p2{
   border-radius: 5px;
   margin-left: 100px;
   padding: 10px;
-  width: 800px;
+  width: auto;
+
 }
 
 .sendRequest{
-  float: left;
-  width: 250px;
-  border: none;
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: #cbced3;
   border-radius: 5px;
-  font-size: 14px;
+  margin-left: 100px;
+  /*padding: 10px;*/
+  width: auto;
 }
 
 .sendRequest p{
+  grid-area: sendRequest;
   border-radius: 5px;
   border-color: black;
 }
 
 .sendField{
-
+  grid-area: sendField;
 }
 
 .sendForm p{

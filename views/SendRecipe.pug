@@ -3,12 +3,12 @@ extends layout
 block content
 
         <div class = "sendContainer">
-
-                <form class="sendForm"id="ContactForm" onsubmit="send_recipe(this)">
-                        <fieldset class="sendRequest">
+                <fieldset class="sendRequest">
                         <legend>Ответ на ваш запрос</legend>
-                                <p id="statusfield"><img src="images/bg1.png" width="230" height="180" ></p>
-                        </fieldset>
+                        <p id="statusfield"><img src="images/bg1.png" width="230" height="180" ></p>
+                </fieldset>
+                <form class="sendForm"id="ContactForm" onsubmit="send_recipe(this)">
+
                         <fieldset class="sendField">
                                 <legend>Заполните форму</legend>
                                 <div>
@@ -41,7 +41,7 @@ block content
                                         <textarea tabindex="6" name="recipe"></textarea>
                                 </div>
                                 <div>
-                                        <button tabindex="7" onclick="send_recipe()" type="submit">Отправить</button>
+                                        <button tabindex="7" id="sendbtn" onclick="send_recipe()" type="submit">Отправить</button>
                                         <button tabindex="8" type="reset" >Очистить</button>
                                 </div>
                         </fieldset>
