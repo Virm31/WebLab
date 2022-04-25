@@ -2,56 +2,57 @@ extends layout
 
 block content
 
-<div class = "container">
-        <form id="ContactForm" onsubmit="send_recipe(this)">
-                <fieldset>
-                        <legend>Заполните форму</legend>
-                        <div>
-                            <p>Имя</p>
-                            <input tabindex="1" placeholder="Имя" name="user_name" type="text">
-                        </div>
-                        <div>
-                                <p>Фамилия</p>
-                                <input tabindex="2" placeholder="Фамилия" name="user_surname" type="text">
-                        </div>
-                        <div>
-                                <p>Электронная почта</p>
-                                <input tabindex="3" placeholder="Электронная почта" name="email" type="email">
-                        </div>
-                        <div>
-                                <p>Название блюда</p>
-                                <input tabindex="4" placeholder="Название блюда" name="DishName" type="text">
-                        </div>
-                        <div>
-                                <p>Тип блюда</p>
-                                <select tabindex="5" name="type">
-                                        <option value="breakfast"> Завтрак </option>
-                                        <option value="lunch"> Обед </option>
-                                        <option value="dinner"> Ужин </option>
-                                        <option value="snack"> Перекус </option>
-                                </select>
-                        </div>
-                        <div>
-                                <p>Рецепт</p>
-                                <textarea tabindex="6" name="recipe"></textarea>
-                        </div>
-                        <div>
-                                <button tabindex="7" onclick="send_recipe()" type="submit">Отправить</button>
-                                <button tabindex="8" type="reset" >Очистить</button>
-                        </div>
-                </fieldset>
-        </form>
+        <div class = "container">
+                <form id="ContactForm" onsubmit="send_recipe(this)">
+                        <fieldset>
+                                <legend>Заполните форму</legend>
+                                <div>
+                                    <p>Имя</p>
+                                    <input tabindex="1" placeholder="Имя" name="user_name" type="text">
+                                </div>
+                                <div>
+                                        <p>Фамилия</p>
+                                        <input tabindex="2" placeholder="Фамилия" name="user_surname" type="text">
+                                </div>
+                                <div>
+                                        <p>Электронная почта</p>
+                                        <input tabindex="3" placeholder="Электронная почта" name="email" type="email">
+                                </div>
+                                <div>
+                                        <p>Название блюда</p>
+                                        <input tabindex="4" placeholder="Название блюда" name="DishName" type="text">
+                                </div>
+                                <div>
+                                        <p>Тип блюда</p>
+                                        <select tabindex="5" name="type">
+                                                <option value="breakfast"> Завтрак </option>
+                                                <option value="lunch"> Обед </option>
+                                                <option value="dinner"> Ужин </option>
+                                                <option value="snack"> Перекус </option>
+                                        </select>
+                                </div>
+                                <div>
+                                        <p>Рецепт</p>
+                                        <textarea tabindex="6" name="recipe"></textarea>
+                                </div>
+                                <div>
+                                        <button tabindex="7" onclick="send_recipe()" type="submit">Отправить</button>
+                                        <button tabindex="8" type="reset" >Очистить</button>
+                                </div>
+                        </fieldset>
+                </form>
 
-        <aside>
-                <div class="facts">
-                        <a id="text-facts" href="#hidden1" onclick="view()">Нажмите, чтобы узнать интересный факт
-                        </a>
-                        <div id="hidden1" style="display: none;">
-                                <p>Ученые Америки провели исследования, в ходя которых было установлено, что в то время, когда в ресторане играет классическая музыка, при чем не громко, гости делают заказ примерно на 50 долларов. В то время, когда в ресторане включали песни Бритни Спирс, заказы резко упали и стали гораздо дешевле. После того, когда музыку выключили вовсе, сумма заказа упала до 30 долларов.</p>
+                <aside>
+                        <div class="facts">
+                                <a id="text-facts" href="#hidden1" onclick="view()">
+                                        <h>Нажмите, чтобы узнать интересный факт<h>
+                                </a>
+                                <div id="hidden1" style="display: none;">
+                                        <p>Ученые Америки провели исследования, в ходя которых было установлено, что в то время, когда в ресторане играет классическая музыка, при чем не громко, гости делают заказ примерно на 50 долларов. В то время, когда в ресторане включали песни Бритни Спирс, заказы резко упали и стали гораздо дешевле. После того, когда музыку выключили вовсе, сумма заказа упала до 30 долларов.</p>
+                                </div>
                         </div>
-                </div>
-        </aside>
-</div>
+                </aside>
+        </div>
 
-<script type="text/javascript" src="/javascripts/hideText.js"></script>
-<script type="text/javascript" src="/javascripts/alert.js"></script>
+        <script type="text/javascript" src="/javascripts/hideText.js"></script>
+        <script type="text/javascript" src="/javascripts/alert.js"></script>
