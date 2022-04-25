@@ -14,8 +14,13 @@ html
         <img src="../images/logo.png" alt="Golden" class = "logo">
         <nav>
           <ul class="top-menu">
-            each item in navmenu
+            each item in navmenu ? navmenu : []
               <li><a href="#{item.addr}">#{item.name}</a></li>
+            //<li><a href="/">Главная</a></li>
+            //<li><a href="/">О нас</a></li>
+            //<li><a href="/">Главная</a></li>
+            //<li><a href="/SendRecipe">Отправить рецепт</a></li>
+
           </ul>
         </nav>
         <form class="search">
