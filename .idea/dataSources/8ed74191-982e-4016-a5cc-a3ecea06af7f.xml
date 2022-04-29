@@ -1284,7 +1284,7 @@
     <argument id="472" parent="162">
       <Position>1</Position>
     </argument>
-    <table id="473" parent="163" name="contactrequest"/>
+    <table id="473" parent="163" name="contactrequests"/>
     <table id="474" parent="163" name="sqlite_master">
       <System>1</System>
     </table>
