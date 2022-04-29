@@ -7,6 +7,7 @@ let logger = require('morgan');
 let homePageRouter = require('./routes/HomePage');
 let sendRouter = require('./routes/SendRecipe');
 let pieRouter = require('./routes/CherryPie');
+let contactrequestRouter = require('./routes/ContactRequest');
 
 let app = express();
 
@@ -23,6 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', homePageRouter);
 app.use('/SendRecipe', sendRouter);
 app.use('/CherryPie', pieRouter);
+app.use('/api/ContactRequest', contactrequestRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

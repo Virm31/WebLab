@@ -12,13 +12,15 @@ sendbtn.addEventListener("click", function (e) {
     // Получаем данные полей формы
     let fname = document.getElementsByName("user_name")[0].value;
     let lname = document.getElementsByName("user_surname")[0].value;
+    let email = document.getElementsByName("email")[0].value;
+    let dishname = document.getElementsByName("DishName")[0].value;
     let reqtype = document.getElementsByName("type")[0].value
     let reqtext = document.getElementsByName("recipe")[0].value
     // Преобразуем полученные данные в JSON
-    var formdata = JSON.stringify({ firstname: fname, lastname: lname, reqtype: reqtype, reqtext: reqtext});
+    let formdata = JSON.stringify({ firstname: fname, lastname: lname, email: email, dishname: dishname, reqtype: reqtype, reqtext: reqtext});
 
     // Отправляем запрос через fetch (необходимо выставить соответствующий заголовок (headers)!)
-    fetch("/SendRecipe/ajaxrequest",
+    fetch("/api/ContactRequest",
         {
             method: "POST",
             body: formdata,
