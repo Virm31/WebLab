@@ -79,7 +79,7 @@ exports.create_contact_req = function(req, res) {
     // Записываем объект в БД
     var curDateTime = new Date(Date.now());
     dbcontext.query(
-        'INSERT INTO contactrequests (`firstname`,`lastname`, `email`, `dishname` `reqtype`,`reqtext`,`createdAt`,`updatedAt`) VALUES (:firstname, :lastname, :email, :dishname, :reqtype, :reqtext, :createdAt, :updatedAt)',
+        'INSERT INTO contactrequests (`firstname`,`lastname`, `email`, `dishname`, `reqtype`,`reqtext`,`createdAt`,`updatedAt`) VALUES (:firstname, :lastname, :email, :dishname, :reqtype, :reqtext, :createdAt, :updatedAt)',
         {
             replacements: { firstname: req.body.firstname, lastname: req.body.lastname, email: req.body.email, dishname: req.body.dishname,
                 reqtype: req.body.reqtype, reqtext: req.body.reqtext, createdAt: curDateTime.toISOString(), updatedAt: curDateTime.toISOString() },
