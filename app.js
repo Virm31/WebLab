@@ -10,8 +10,8 @@ let homePageRouter = require('./routes/HomePage');
 let sendRouter = require('./routes/SendRecipe');
 let pieRouter = require('./routes/CherryPie');
 let contactrequestRouter = require('./routes/ContactRequest');
-//let loginRouter = require('./routes/login');
-let registerRouter = require('./routes/register');
+let loginRouter = require('./routes/Login');
+let registerRouter = require('./routes/Register');
 
 let app = express();
 
@@ -36,10 +36,19 @@ app.use(session({
   }
 }));
 
+app.use((req, res, next) => {
+  if (req.cookies.user_sid && !req.session.user) {
+    res.clearCookie('user_sid');
+  }
+  next();
+});
+
+// Привязка обработчиков маршрутов к маршрутам
 app.use('/', homePageRouter);
 app.use('/SendRecipe', sendRouter);
 app.use('/CherryPie', pieRouter);
 app.use('/api/ContactRequest', contactrequestRouter);
+app.use('/login', loginRouter);
 app.use('/register', registerRouter);
 
 // catch 404 and forward to error handler

@@ -1,14 +1,14 @@
 var express = require('express');
 var router = express.Router();
 
-var main_controller = require('../controllers/mainController');
+var { navmenu, sessionCheck } = require('../controllers/mainController');
 
 
-router.get('/', function(req, res, next) {
-    res.render('SendRecipe', {
-        title: 'RecipesFromGlasha',
-        pname: 'SendRecipe',
-        navmenu: main_controller.navmenu } );
+router.get('/', sessionCheck, function(req, res) {
+    res.render('contact', {
+        title: 'Golden',
+        pname: 'CONTACT',
+        navmenu: navmenu });
 });
 
 router.post("/ajaxrequest", function (req, res) {

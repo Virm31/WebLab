@@ -135,6 +135,7 @@ exports.update_contact_req_by_id = function(req, res) {
             res.status(500).json({ message: err.message });
         });
 };
+
 // Функция для проверки авторизации пользователя
 exports.sessionCheck = (req, res, next) => {
     // Если не установлен параметр сессии user или значение cookie 'AuthToken' не равно логину пользователя
