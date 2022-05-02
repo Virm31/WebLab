@@ -318,7 +318,8 @@ p2{
   padding-bottom: 30px;
   display: grid;
   grid-template-areas:
-    "sendRequest" "sendField";
+    "sendRequest" "sendField"
+    "facts";
   grid-template-columns:300px 1000px;
   grid-auto-rows: auto;
 }
@@ -428,7 +429,38 @@ textarea {
   font-size: 15px;
   border-radius: 4px;
 }
-/*стилизация футтера*/
+
+/*страницы регистрации*/
+.auth-form {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.auth-form button {
+  background-color: rgb(135, 161, 98);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.auth-form input {
+  margin-bottom: 16px;
+  border: none;
+  border-bottom: 1px solid #777777;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.auth-form p{
+  color: black;
+  font-size: 14px;
+}
+
+  /*стилизация футтера*/
 
 .footer {
   grid-area: footer;

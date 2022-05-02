@@ -2,12 +2,16 @@ let createError = require('http-errors');
 let express = require('express');
 let path = require('path');
 let cookieParser = require('cookie-parser');
+let session = require('express-session');
 let logger = require('morgan');
 
+// Подключение обработчиков маршрутов
 let homePageRouter = require('./routes/HomePage');
 let sendRouter = require('./routes/SendRecipe');
 let pieRouter = require('./routes/CherryPie');
 let contactrequestRouter = require('./routes/ContactRequest');
+//let loginRouter = require('./routes/login');
+let registerRouter = require('./routes/register');
 
 let app = express();
 
@@ -21,10 +25,22 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(session({
+  key: 'user_sid',
+  secret: 'anypassword',
+  resave: false,
+  saveUninitialized: true,
+  cookie: {
+    signed: false,
+    maxAge: 600000
+  }
+}));
+
 app.use('/', homePageRouter);
 app.use('/SendRecipe', sendRouter);
 app.use('/CherryPie', pieRouter);
 app.use('/api/ContactRequest', contactrequestRouter);
+app.use('/register', registerRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
