@@ -5,7 +5,7 @@ var { navmenu, sessionCheck } = require('../controllers/mainController');
 
 
 router.get('/', sessionCheck, function(req, res) {
-    res.render('contact', {
+    res.render('SendRecipe', {
         title: 'Golden',
         pname: 'CONTACT',
         navmenu: navmenu });
