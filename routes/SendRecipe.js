@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var { navmenu, sessionCheck } = require('../controllers/mainController');
+var { navmenu, sessionCheck} = require('../controllers/mainController');
 
 
 router.get('/', sessionCheck, function(req, res) {

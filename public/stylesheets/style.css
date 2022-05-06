@@ -359,6 +359,7 @@ p2{
 .sendRequest p{
   border-radius: 5px;
   border-color: black;
+  word-break:break-all;
 }
 
 .sendField{

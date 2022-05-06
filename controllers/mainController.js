@@ -27,7 +27,7 @@ exports.get_contact_req_all = function(req, res) {
         'SELECT * FROM contactrequests', { type: dbcontext.QueryTypes.SELECT }
     )
         .then(data => {
-            res.json(data[0]);
+            res.json(data);
         })
         .catch(err => {
             res.status(500).send({
@@ -36,17 +36,19 @@ exports.get_contact_req_all = function(req, res) {
         });
 };
 
+
+
 // Показать запрос по id (primary key).
 exports.get_contact_req_by_id = function(req, res) {
     dbcontext.query(
-        'SELECT * FROM contactrequests WHERE id = :id',
+        'SELECT * FROM contactrequests WHERE ownerId = :ownerId',
         {
-            replacements: { id: req.params.id },
+            replacements: { ownerId: req.session.userId },
             type: dbcontext.QueryTypes.SELECT
         }
     )
         .then(data => {
-            res.json(data[0]);
+            res.json(data);
         })
         .catch(err => {
             res.status(500).json({ message: err.message });
@@ -80,10 +82,10 @@ exports.create_contact_req = function(req, res) {
     // Записываем объект в БД
     var curDateTime = new Date(Date.now());
     dbcontext.query(
-        'INSERT INTO contactrequests (`firstname`,`lastname`, `email`, `dishname`, `reqtype`,`reqtext`,`createdAt`,`updatedAt`) VALUES (:firstname, :lastname, :email, :dishname, :reqtype, :reqtext, :createdAt, :updatedAt)',
+        'INSERT INTO contactrequests (`firstname`,`lastname`, `email`, `dishname`, `reqtype`,`reqtext`,`createdAt`,`updatedAt`,`ownerId`) VALUES (:firstname, :lastname, :email, :dishname, :reqtype, :reqtext, :createdAt, :updatedAt,:ownerId)',
         {
             replacements: { firstname: req.body.firstname, lastname: req.body.lastname, email: req.body.email, dishname: req.body.dishname,
-                reqtype: req.body.reqtype, reqtext: req.body.reqtext, createdAt: curDateTime.toISOString(), updatedAt: curDateTime.toISOString() },
+                reqtype: req.body.reqtype, reqtext: req.body.reqtext, createdAt: curDateTime.toISOString(), updatedAt: curDateTime.toISOString(),ownerId: req.session.userId },
             type: dbcontext.QueryTypes.INSERT
         }
     )
